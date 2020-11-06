@@ -1,0 +1,74 @@
+{
+    "name": "Fast_SCNN_CGMU_L",
+    "semi": false,
+    "seeds": {
+        "numpy": 1111,
+        "torch": 1111,
+        "random": 1111
+    },
+    "model": {
+        "type": "Fast_SCNN",
+        "args": {
+            "input_channel": 3, 
+            "num_classes": 6
+        }
+    },
+    "optimizer": {
+        "type": "Adam",
+        "args":{
+            "lr": 0.001,
+            "weight_decay": 0,
+            "amsgrad": false
+        }
+    },
+    "trainer": {
+        "type": "FastSCNN_Trainer",
+        "log_dir": "logs/",
+        "save_period": 1,
+        "log_period": 10,
+        "epochs": 30,
+        "break_epoch": 2,
+        "max_evals": 20,
+        "options": {
+        }
+    },
+    "hyperparam": {
+        "lr": [0.0005, 0.002] 
+    },
+    "predictor": {
+        "type": "FastSCNN_Predictor",
+        "save_dir": "Predictions/CGMU_L/",
+        "red_shade": false,
+        "rgb_label": true,
+        "options": {  
+        }
+    },
+    "data": {
+        "dataloader": {
+            "train": {
+                "batch_size": 1,
+                "shuffle": true
+            },
+            "valid": {
+                "batch_size": 1,
+                "shuffle": false
+            },
+            "test": {
+                "batch_size": 1,
+                "shuffle": false
+            },
+            "prediction": {
+                "batch_size": 1,
+                "shuffle": false
+            }
+        },
+        "dataset": {
+            "name": "CGMU",
+            "data_dir": "Images/CGMU_L",
+            "prediction_list": "Predictions/CGMU_L/prediction_list.txt",
+            "labels2keep": [0, 5, 6, 8, 9, 11],
+            "crop": null,
+            "fixed_size": null
+        }
+    }
+}

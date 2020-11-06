@@ -1,0 +1,74 @@
+{
+    "name": "Fast_SCNN_CS",
+    "semi": false,
+    "seeds": {
+        "numpy": 1111,
+        "torch": 1111,
+        "random": 1111
+    },
+    "model": {
+        "type": "Fast_SCNN",
+        "args": {
+            "input_channel": 3, 
+            "num_classes": 11
+        }
+    },
+    "optimizer": {
+        "type": "Adam",
+        "args":{
+            "lr": 0.001,
+            "weight_decay": 0,
+            "amsgrad": false
+        }
+    },
+    "trainer": {
+        "type": "FastSCNN_Trainer",
+        "log_dir": "logs/",
+        "save_period": 1,
+        "log_period": 10,
+        "epochs": 30,
+        "break_epoch": 2,
+        "max_evals": 20,
+        "options": {
+        }
+    },
+    "hyperparam": {
+        "lr": [0.0005, 0.002] 
+    },
+    "predictor": {
+        "type": "FastSCNN_Predictor",
+        "save_dir": "Predictions/Cityscape/",
+        "red_shade": false,
+        "rgb_label": true,
+        "options": {  
+        }
+    },
+    "data": {
+        "dataloader": {
+            "train": {
+                "batch_size": 1,
+                "shuffle": true
+            },
+            "valid": {
+                "batch_size": 1,
+                "shuffle": false
+            },
+            "test": {
+                "batch_size": 1,
+                "shuffle": false
+            },
+            "prediction": {
+                "batch_size": 1,
+                "shuffle": false
+            }
+        },
+        "dataset": {
+            "name": "Cityscape",
+            "data_dir": "Images/Cityscape",
+            "prediction_list": "Predictions/Cityscape/prediction_list.txt",
+            "labels2keep": [0, 7, 8, 11, 12, 13, 17, 21, 23, 24, 26],
+            "crop": null,
+            "fixed_size": null
+        }
+    }
+}

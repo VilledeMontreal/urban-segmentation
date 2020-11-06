@@ -1,0 +1,98 @@
+{
+    "name": "experiment_name",
+    "semi": true                    @Do not change. Use template_supervised.json for supervised-only training,                                    
+    "seeds": {                      @Random seeds are initialized with the following seeds
+        "numpy": 1111,
+        "torch": 1111,
+        "random": 1111
+    },
+    "model": {
+        "type": "model_name"        @as imported in models/__init__.py,
+        "args": {
+            "input_channel": 3      @first init argument of your model class, 
+            "num_classes": 35       @rename the keys to match model args,
+            "arg3": "args3"         @use as many as needed,
+            "arg4": "args4"         @remove the args you don't need
+        }
+    },
+    "model_d": {
+        "type": "model_name"        @discriminator model as imported in models/__init__.py,
+        "args": {
+            "num_classes":35
+        }
+    },
+    "optimizer": {                  @optimizer for model
+        "type": "Adam"              @can be any Pytorch optimizer,
+        "args":{                    @set your optim parameters below
+            "lr": 0.001,
+            "weight_decay": 0,
+            "amsgrad": false
+        }
+    },
+    "optimizer_d": {                @optimizer for model_d
+        "type": "Adam"              @can be any Pytorch optimizer,
+        "power": 0.9                @used for custom lr decay,
+        "args":{                    @set your optim parameters below
+            "lr": 0.0001,
+            "weight_decay": 0,
+            "amsgrad": false
+        }
+    },
+    "trainer": {
+        "type": "trainer_name"      @as imported in trainers/__init__.py,
+        "log_dir": "logs/"          @a new directory is created at this path,
+        "nb_iters": 20001           @number of iterations to run training,
+        "nb_valid_iters": 10        @number of iterations to average for validation,
+        "semi_start": 5000          @iteration after which semi-supervised training is done,
+        "threshold": 0.2            @semi-supervised confidence threshold,
+        "lambda_adv_label": 0.01    @discriminator loss weight when using labelled data,
+        "lambda_adv_unlabel": 0.001 @discriminator loss weight when using unlabelled data,
+        "lambda_semi": 0.1          @semi-supervised loss weight when using inlabelled data,
+        "save_period": 100          @checkpoint saved after a period of iterations,
+        "max_evals": 20             @number of hyperparameter search iterations,
+        "options": {
+        }
+    },
+    "hyperparam": {                 @a list of hyperparameters to tune and the range to search,
+        "lr": [0.0005, 0.002]
+    },
+    "predictor": {
+        "type": "predictor_name"    @as imported in predictors/__init__.py,
+        "save_dir": "Pred/CS/"      @a new directory is created at this path,
+        "red_shade": false          @monochrome images with class label in first channel,
+        "rgb_label": true           @colored images using color scheme defined in utils/dataloader.py,
+        "options": {  
+        }
+    },
+    "data": {
+        "dataloader": {
+            "train": {
+                "batch_size": 1,
+                "shuffle": true
+            },
+            "valid": {
+                "batch_size": 1,
+                "shuffle": true
+            },
+            "test": {
+                "batch_size": 1,
+                "shuffle": false
+            },
+            "prediction": {
+                "batch_size": 1,
+                "shuffle": false
+            },
+            "extra": {
+                "batch_size": 1,
+                "shuffle": false
+            }
+        },
+        "dataset": {
+            "name": "Cityscape",
+            "data_dir": "Images/Cityscape",
+            "prediction_list": "Predictions/Cityscape/prediction_list.txt",
+            "labels2keep": [0, 6, 7, 8] or null     @The other labels are set to 0,
+            "crop": [1024, 1024] or null            @The  images are cropped to this size
+        }
+    }
+}

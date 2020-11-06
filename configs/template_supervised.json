@@ -1,0 +1,79 @@
+{
+    "name": "experiment_name",
+    "semi": false                   @Do not change. Use template_semi.json for semi-supervised training,
+    "seeds": {                      @Random seeds are initialized with the following seeds
+        "numpy": 1111,
+        "torch": 1111,
+        "random": 1111
+    },
+    "model": {
+        "type": "model_name"        @as imported in models/__init__.py,
+        "args": {
+            "input_channel": 3      @first init argument of your model class, 
+            "num_classes": 35       @rename the keys to match model args,
+            "arg3": "args3"         @use as many as needed,
+            "arg4": "args4"         @remove the args you don't need
+        }
+    },
+    "optimizer": {                  @optimizer for model
+        "type": "Adam"              @can be any Pytorch optimizer,
+        "args":{                    @set your optim parameters below
+            "lr": 0.001,
+            "weight_decay": 0,
+            "amsgrad": false
+        }
+    },
+    "trainer": {
+        "type": "trainer_name"      @as imported in trainers/__init__.py,
+        "log_dir": "logs/"          @a new directory is created at this path,
+        "save_period": 1            @checkpoint saved after a period of epochs,
+        "log_period": 10            @log frequency after a period of batches,
+        "epochs": 20                @number of epochs to run training,
+        "break_epoch": 3            @number of consecutive epochs without improvement needed to stop training,
+        "max_evals": 20             @number of hyperparameter search iterations,
+        "options": {
+        }
+    },
+    "hyperparam": {                 @a list of hyperparameters to tune and the range to search,
+        "threshold": [0, 0.3],
+        "lambda_adv_label": [0.005, 0.02],
+        "lambda_adv_unlabel": [0.0005, 0.002],
+        "lambda_semi": [0.05, 0.2],
+        "lr": [0.0005, 0.002] 
+    },
+    "predictor": {
+        "type": "predictor_name"    @as imported in predictors/__init__.py,
+        "save_dir": "Pred/CS/"      @a new directory is created at this path,
+        "red_shade": false          @monochrome images with class label in first channel,
+        "rgb_label": true           @colored images using color scheme defined in utils/dataloader.py,
+        "options": {  
+        }
+    },
+    "data": {
+        "dataloader": {
+            "train": {
+                "batch_size": 1,
+                "shuffle": true
+            },
+            "valid": {
+                "batch_size": 1,
+                "shuffle": false
+            },
+            "test": {
+                "batch_size": 1,
+                "shuffle": false
+            },
+            "prediction": {
+                "batch_size": 1,
+                "shuffle": false
+            }
+        },
+        "dataset": {
+            "name": "Cityscape",
+            "data_dir": "Images/Cityscape",
+            "prediction_list": "Predictions/Cityscape/prediction_list.txt",
+            "labels2keep": [0, 6, 7, 8] or null     @The other labels are set to 0,
+            "crop": [1024, 1024] or null            @The  images are cropped to this size
+        }
+    }
+}

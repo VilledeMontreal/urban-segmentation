@@ -1,0 +1,103 @@
+{
+    "name": "SegNet_CS_semi",
+    "semi": true,
+    "seeds": {
+        "numpy": 1111,
+        "torch": 1111,
+        "random": 1111
+    },
+    "model": {
+        "type": "SegNet",
+        "args": {
+            "input_channel": 3, 
+            "num_classes": 11,
+            "pretrained": true
+        }
+    },
+    "model_d": {
+        "type": "Discriminator",
+        "args": {
+            "num_classes": 11
+        }
+    },
+    "optimizer": {
+        "type": "Adam",
+        "args":{
+            "lr": 0.001,
+            "weight_decay": 0,
+            "amsgrad": false
+        }
+    },
+    "optimizer_d": {
+        "type": "Adam",
+        "power": 0.9,
+        "args":{
+            "lr": 0.0001,
+            "weight_decay": 0,
+            "amsgrad": false
+        }
+    },
+    "trainer": {
+        "type": "SegNet_Trainer_S",
+        "log_dir": "logs/",
+        "save_period": 50,
+        "nb_iters": 20001,
+        "nb_valid_iters": 10,
+        "semi_start": 5000,
+        "threshold": 0.2,
+        "lambda_adv_label": 0.01,
+        "lambda_adv_unlabel": 0.001,
+        "lambda_semi": 0.1,
+        "max_evals": 20,
+        "options": {
+            "shrink_factor": 4
+        }
+    },
+    "hyperparam": {
+        "threshold": [0, 0.3],
+        "lambda_adv_label": [0.005, 0.02],
+        "lambda_adv_unlabel": [0.0005, 0.002],
+        "lambda_semi": [0.05, 0.2],
+        "lr": [0.0005, 0.002] 
+    },
+    "predictor": {
+        "type": "SegNet_Predictor",
+        "save_dir": "Predictions/Cityscape/",
+        "red_shade": false,
+        "rgb_label": true,
+        "options": {  
+        }
+    },
+    "data": {
+        "dataloader": {
+            "train": {
+                "batch_size": 1,
+                "shuffle": true
+            },
+            "valid": {
+                "batch_size": 1,
+                "shuffle": true
+            },
+            "test": {
+                "batch_size": 1,
+                "shuffle": false
+            },
+            "prediction": {
+                "batch_size": 1,
+                "shuffle": false
+            },
+            "extra": {
+                "batch_size": 1,
+                "shuffle": false
+            }
+        },
+        "dataset": {
+            "name": "Cityscape",
+            "data_dir": "Images/Cityscape",
+            "prediction_list": "Predictions/Cityscape/prediction_list.txt",
+            "labels2keep": [0, 7, 8, 11, 12, 13, 17, 21, 23, 24, 26],
+            "crop": null,
+            "fixed_size": null
+        }
+    }
+}
