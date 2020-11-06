@@ -1,8 +1,8 @@
 ([Français](#Code-de-conduite-pour-le-projet-nom-du-projet))
 
-# Contributor Covenant Code of Conduct for the [`project_name`] project
+# Contributor Covenant Code of Conduct for the `urban-segmentation` project
 
-Contributors to repositories hosted in [`project_name`] are expected to follow the Contributor Covenant Code of Conduct, and those working within City of Montreal are also expected to follow the Code of Conduct for the City of Montreal Employees 
+Contributors to repositories hosted in `urban-segmentation` are expected to follow the Contributor Covenant Code of Conduct, and those working within City of Montreal are also expected to follow the Code of Conduct for the City of Montreal Employees 
 
 ## Code of Conduct for the City Employees
 
@@ -68,9 +68,9 @@ available at [https://www.contributor-covenant.org/version/1/4/code-of-conduct.h
 
 ([English](#Contributor-Covenant-Code-of-Conduct-for-the-project_name-project))
 
-# Code de conduite pour le projet [`nom du projet`]
+# Code de conduite pour le projet `urban-segmentation`
 
-Les contributeurs aux dépôts hébergés dans [`nom du projet`] sont tenus de respecter le Code de conduite du Pacte des contributeurs, et ceux qui travaillent au sein de la Ville de Montréal sont également tenus de respecter le Code de conduite des employés de la Ville de Montréal.
+Les contributeurs aux dépôts hébergés dans `urban-segmentation` sont tenus de respecter le Code de conduite du Pacte des contributeurs, et ceux qui travaillent au sein de la Ville de Montréal sont également tenus de respecter le Code de conduite des employés de la Ville de Montréal.
 
 ## Code de conduite des employés de la Ville de Montréal
 
