@@ -43,8 +43,8 @@ The following image is taken from the 10 000 annotated images we used to train t
 
 
 <p align="center">
-  <img src="res/007562.jpeg width="400" height="400">
-  <img src="res/007562.png" width="400" height="400">
+  <img src="res/007562.jpeg" width="300" >
+  <img src="res/007562.png" width="300" >
 </p>
 
 You can find the annotated dataset on the City of Montreal's [open data site](https://donnees.montreal.ca/ville-de-montreal/images-annotees-cameras-circulation). 
@@ -79,9 +79,9 @@ segmentation is with all classes and third segmentation is limited to static cla
 annotation previously performed by a human (first image).
 
 <p align="center">
-  <img src="res/annotation.png" width="300" height="300">
-  <img src="res/dynamic.png" width="300" height="300">
-  <img src="res/static.png" width="300" height="300">
+  <img src="res/annotation.png" width="250">
+  <img src="res/dynamic.png" width="250">
+  <img src="res/static.png" width="250">
 </p>
 
 
@@ -124,7 +124,7 @@ Template configs are available under ```configs/template_semi.json``` and ```con
 Additionally, different trainer arguments and hyperparameters are needed when using the semi-supervised wrappers. See 
 the template configs for an extensive list.
 
-<img src="res/inheritance.png" width="100" height="400">
+<img src="res/inheritance.png" width="500">
 
 
 ## Dataset
@@ -276,8 +276,8 @@ connaître ses métadonnées.
 L'image suivante est tirée des 10 000 images annotées que nous avons utilisées pour entraîner les modèles.
 
 <p align="center">
-  <img src="res/007562.jpeg width="400" height="400">
-  <img src="res/007562.png" width="400" height="400">
+  <img src="res/007562.jpeg" width="300" >
+  <img src="res/007562.png" width="300" >
 </p>
 
 Vous pouvez trouver l'ensemble de données annotées sur le [site de données ouvertes] de la Ville de 
@@ -324,9 +324,9 @@ segmentation est avec toutes les classes et la troisième est limitée aux class
 l’annotation manuelle effectuée au préalable par un humain (première image).
 
 <p align="center">
-  <img src="res/annotation.png" width="300" height="300">
-  <img src="res/dynamic.png" width="300" height="300">
-  <img src="res/static.png" width="300" height="300">
+  <img src="res/annotation.png" width="250">
+  <img src="res/dynamic.png" width="250">
+  <img src="res/static.png" width="250">
 </p>
 
 ## Requis
@@ -378,7 +378,7 @@ Des options additionnelles sont nécessaires si ce paramètre est défini à *tr
 De plus, différents arguments d'entraînement et hyperparamètres sont nécessaires lors de l'utilisation des wrappers 
 semi-supervisés. Voir les fichiers de type ```configs/template_``` pour une liste complète.
 
-<img src="res/inheritance.png" width="400" height="400">
+<img src="res/inheritance.png" width="500">
 
 ## Ensemble de données
 
