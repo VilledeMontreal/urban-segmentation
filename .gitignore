@@ -13,3 +13,4 @@ analysis/
 trials*
 Images
 .idea/
+**/.DS_Store

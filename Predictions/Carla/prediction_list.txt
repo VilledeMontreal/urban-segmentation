@@ -1,0 +1,12 @@
+test/0175.tiff
+test/0185.tiff
+test/0195.tiff
+test/0220.tiff
+test/0232.tiff
+test/0252.tiff
+test/0269.tiff
+test/0289.tiff
+test/0768.tiff
+test/0800.tiff
+test/0845.tiff
+test/0895.tiff

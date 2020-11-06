@@ -1,0 +1,8 @@
+test/berlin_000000_000019.png
+test/berlin_000157_000019.png
+test/bonn_000022_000019.png
+test/bonn_000031_000019.png
+test/munich_000022_000019.png
+test/munich_000052_000019.png
+test/mainz_000001_027124.png
+test/mainz_000001_031697.png
