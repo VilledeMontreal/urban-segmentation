@@ -41,8 +41,11 @@ areas of interest, and possibly to identify the direction a camera is pointing w
 
 The following image is taken from the 10 000 annotated images we used to train the models.
 
-<img src="res/007562.jpeg" width="200" height="200">
-<img src="res/007562.png" width="200" height="200">
+
+<p align="center">
+  <img src="res/007562.jpeg width="400" height="400">
+  <img src="res/007562.png" width="400" height="400">
+</p>
 
 You can find the annotated dataset on the City of Montreal's [open data site](https://donnees.montreal.ca/ville-de-montreal/images-annotees-cameras-circulation). 
 Follow the link and along with the data, you will find a data dictionary (with semantic tags and their colour), the methodology applied to annotate data, the terms of use, etc.
@@ -74,10 +77,11 @@ performances can be found in Saber Benchalel's internship report.
 As an example, the images below compare the results of the classification performed by the semi-supervised model (second 
 segmentation is with all classes and third segmentation is limited to static classes) to the manual
 annotation previously performed by a human (first image).
+
 <p align="center">
-  <img src="res/annotation.png" width="100" height="100">
-  <img src="res/dynamic.png" width="100" height="100">
-  <img src="res/static.png" width="100" height="100">
+  <img src="res/annotation.png" width="300" height="300">
+  <img src="res/dynamic.png" width="300" height="300">
+  <img src="res/static.png" width="300" height="300">
 </p>
 
 
@@ -120,7 +124,7 @@ Template configs are available under ```configs/template_semi.json``` and ```con
 Additionally, different trainer arguments and hyperparameters are needed when using the semi-supervised wrappers. See 
 the template configs for an extensive list.
 
-<img src="res/inheritance.png" width="100" height="100">
+<img src="res/inheritance.png" width="100" height="400">
 
 
 ## Dataset
@@ -271,9 +275,10 @@ connaître ses métadonnées.
 
 L'image suivante est tirée des 10 000 images annotées que nous avons utilisées pour entraîner les modèles.
 
-<img src="res/007562.jpeg" width="200" height="200">
-<img src="res/007562.png" width="200" height="200">
-
+<p align="center">
+  <img src="res/007562.jpeg width="400" height="400">
+  <img src="res/007562.png" width="400" height="400">
+</p>
 
 Vous pouvez trouver l'ensemble de données annotées sur le [site de données ouvertes] de la Ville de 
 Montréal (https://donnees.montreal.ca/ville-de-montreal/images-annotees-cameras-circulation). Suivez le lien et vous trouverez, en plus des données, un dictionnaire 
@@ -319,9 +324,9 @@ segmentation est avec toutes les classes et la troisième est limitée aux class
 l’annotation manuelle effectuée au préalable par un humain (première image).
 
 <p align="center">
-  <img src="res/annotation.png" width="100" height="100">
-  <img src="res/dynamic.png" width="100" height="100">
-  <img src="res/static.png" width="100" height="100">
+  <img src="res/annotation.png" width="300" height="300">
+  <img src="res/dynamic.png" width="300" height="300">
+  <img src="res/static.png" width="300" height="300">
 </p>
 
 ## Requis
@@ -373,7 +378,7 @@ Des options additionnelles sont nécessaires si ce paramètre est défini à *tr
 De plus, différents arguments d'entraînement et hyperparamètres sont nécessaires lors de l'utilisation des wrappers 
 semi-supervisés. Voir les fichiers de type ```configs/template_``` pour une liste complète.
 
-<img src="res/inheritance.png" width="100" height="100">
+<img src="res/inheritance.png" width="400" height="400">
 
 ## Ensemble de données
 
