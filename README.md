@@ -43,8 +43,8 @@ The following image is taken from the 10 000 annotated images we used to train t
 
 
 <p align="center">
-  <img src="res/007562.jpeg" width="300" >
-  <img src="res/007562.png" width="300" >
+  <img src="res/007562.jpeg" width="350" >
+  <img src="res/007562.png" width="350" >
 </p>
 
 You can find the annotated dataset on the City of Montreal's [open data site](https://donnees.montreal.ca/ville-de-montreal/images-annotees-cameras-circulation). 
@@ -79,9 +79,9 @@ segmentation is with all classes and third segmentation is limited to static cla
 annotation previously performed by a human (first image).
 
 <p align="center">
-  <img src="res/annotation.png" width="250">
-  <img src="res/dynamic.png" width="250">
-  <img src="res/static.png" width="250">
+  <img src="res/annotation.png" width="270">
+  <img src="res/dynamic.png" width="270">
+  <img src="res/static.png" width="270">
 </p>
 
 
@@ -124,7 +124,7 @@ Template configs are available under ```configs/template_semi.json``` and ```con
 Additionally, different trainer arguments and hyperparameters are needed when using the semi-supervised wrappers. See 
 the template configs for an extensive list.
 
-<img src="res/inheritance.png" width="500">
+<img src="res/inheritance.png" align="center" width="650">
 
 
 ## Dataset
@@ -196,11 +196,11 @@ but the config that is used is found by loading the checkpoint and inspecting ``
 
 For convenience, we provide 5 pre-trained models in *Releases*. They have been trained as described in the report:
 
-  - fs_cgmul_static_acc.pth : Semi-supervised + Fast-SCNN predictor, dataset : large images (CGMU_L), classes : only static.
-  - fs_cgmus_static_acc.pth : Semi-supervised + Fast-SCNN predictor, dataset : small images (CGMU_S), classes : only static.
-  - fs_cgmu_semi_acc.pth : Semi-supervised  + Fast-SCNN predictor, dataset : small and large images (CGMU_S+CGMU_L), classes : all.
-  - fs_cgmu_sm_acc.pth : Fast-SCNN predictor, dataset : small and large images (CGMU_S+CGMU_L), classes : all.
-  - fs_cgmu_l_acc.pth : Fast-SCNN predictor, dataset : large images (CGMU_L), classes : all.
+  - ```fs_cgmul_static_acc.pth``` : Semi-supervised + Fast-SCNN predictor, dataset : large images (CGMU_L), classes : only static.
+  - ```fs_cgmus_static_acc.pth``` : Semi-supervised + Fast-SCNN predictor, dataset : small images (CGMU_S), classes : only static.
+  - ```fs_cgmu_semi_acc.pth``` : Semi-supervised  + Fast-SCNN predictor, dataset : small and large images (CGMU_S+CGMU_L), classes : all.
+  - ```fs_cgmu_sm_acc.pth``` : Fast-SCNN predictor, dataset : small and large images (CGMU_S+CGMU_L), classes : all.
+  - ```fs_cgmu_l_acc.pth``` : Fast-SCNN predictor, dataset : large images (CGMU_L), classes : all.
 
 These models can be used for inference without training. However, it requires to have the dataset directory and file hierarchy
 in place. Since it is for inference only, the directories under ```Semantic``` can be empty.
@@ -276,8 +276,8 @@ connaître ses métadonnées.
 L'image suivante est tirée des 10 000 images annotées que nous avons utilisées pour entraîner les modèles.
 
 <p align="center">
-  <img src="res/007562.jpeg" width="300" >
-  <img src="res/007562.png" width="300" >
+  <img src="res/007562.jpeg" width="350" >
+  <img src="res/007562.png" width="350" >
 </p>
 
 Vous pouvez trouver l'ensemble de données annotées sur le [site de données ouvertes] de la Ville de 
@@ -324,10 +324,11 @@ segmentation est avec toutes les classes et la troisième est limitée aux class
 l’annotation manuelle effectuée au préalable par un humain (première image).
 
 <p align="center">
-  <img src="res/annotation.png" width="250">
-  <img src="res/dynamic.png" width="250">
-  <img src="res/static.png" width="250">
+  <img src="res/annotation.png" width="270">
+  <img src="res/dynamic.png" width="270">
+  <img src="res/static.png" width="270">
 </p>
+
 
 ## Requis
 
@@ -378,7 +379,7 @@ Des options additionnelles sont nécessaires si ce paramètre est défini à *tr
 De plus, différents arguments d'entraînement et hyperparamètres sont nécessaires lors de l'utilisation des wrappers 
 semi-supervisés. Voir les fichiers de type ```configs/template_``` pour une liste complète.
 
-<img src="res/inheritance.png" width="500">
+<img src="res/inheritance.png" align="center" width="650">
 
 ## Ensemble de données
 
@@ -455,15 +456,15 @@ en inspectant ```checkpoint ['config']```.
 Pour plus de commodité, nous libérons 5 modèles préentraînés dans *Releases*. Ils ont été entraînés comme décrit dans 
 le rapport:
 
-  - fs_cgmul_static_acc.pth : Semi-supervisé + prédicteur Fast-SCNN, ensemble de données : grandes images (CGMU_L), classes : statiques uniquement.
-  - fs_cgmus_static_acc.pth : Semi-supervisé + prédicteur Fast-SCNN, ensemble de données : petites images (CGMU_S), classes : statiques uniquement.
-  - fs_cgmu_semi_acc.pth : Semi-supervisé  + prédicteur Fast-SCNN, ensemble de données : petites et grandes images (CGMU_S+CGMU_L), classes : toutes.
-  - fs_cgmu_sm_acc.pth : prédicteur Fast-SCNN, ensemble de données : petites et grandes images (CGMU_S+CGMU_L), classes : toutes.
-  - fs_cgmu_l_acc.pth : prédicteur Fast-SCNN, ensemble de données : grandes images (CGMU_L), classes : toutes.
+  - ```fs_cgmul_static_acc.pth``` : Semi-supervisé + prédicteur Fast-SCNN, ensemble de données : grandes images (CGMU_L), classes : statiques uniquement.
+  - ```fs_cgmus_static_acc.pth``` : Semi-supervisé + prédicteur Fast-SCNN, ensemble de données : petites images (CGMU_S), classes : statiques uniquement.
+  - ```fs_cgmu_semi_acc.pth``` : Semi-supervisé  + prédicteur Fast-SCNN, ensemble de données : petites et grandes images (CGMU_S+CGMU_L), classes : toutes.
+  - ```fs_cgmu_sm_acc.pth``` : prédicteur Fast-SCNN, ensemble de données : petites et grandes images (CGMU_S+CGMU_L), classes : toutes.
+  - ```fs_cgmu_l_acc.pth``` : prédicteur Fast-SCNN, ensemble de données : grandes images (CGMU_L), classes : toutes.
 
 Ces modèles peuvent être utilisés pour l'inférence sans entraînement. Cependant, il est nécessaire d'avoir le répertoire 
 de l'ensemble de données et la hiérarchie des fichiers en place. Puisqu'il s'agit uniquement d'inférence, les répertoires 
-sous ```Sémantique``` peuvent être vides.
+sous ```Semantic``` peuvent être vides.
 
 
 ### Contribuer
