@@ -1,0 +1,15 @@
+logs/*
+.vscode/*
+Images/*
+mlruns/*
+analysis/
+
+*.pyc
+*.pth
+*.tiff
+*.pl
+*.zip
+*.xlsx*
+trials*
+Images
+.idea/
