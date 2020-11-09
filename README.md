@@ -47,7 +47,7 @@ The following image is taken from the 10 000 annotated images we used to train t
   <img src="res/007562.png" width="350" >
 </p>
 
-You can find the annotated dataset on the City of Montreal's [open data site](https://donnees.montreal.ca/ville-de-montreal/images-annotees-cameras-circulation). 
+You can find **VERY SOON** the annotated dataset on the City of Montreal's open data site. 
 Follow the link and along with the data, you will find a data dictionary (with semantic tags and their colour), the methodology applied to annotate data, the terms of use, etc.
 
 It is important to note that the images we used for this project are taken from images already published on the [open data site](https://ville.montreal.qc.ca/circulation/). We made sure this data/code opening process respects the privacy of citizens. As these cameras are installed to assist CGMU operators in their traffic management, they are tuned to limit the information collected. They are therefore adjusted so that they cannot capture the faces nor the license plates. Also, even if we were able to identify a vehicle or a person (e.g. the clothes worn), it would not be possible to track its movements because the images are kept and published only at 5-minute intervals.
@@ -158,7 +158,7 @@ Some key points to keep in mind:
  - The images contained in ```RGB``` are used as inputs to the models. The images contained in ```Semantic``` are used as targets.
  - Images in ```RGB``` and their equivalent in ```Semantic``` must have the same name, but may use different image file formats (png, jpg, tiff, etc.).
  - Images > 'Dataset_Name' > RGB > extra is only required for semi-supervised training.
- - Images (RGB and semantic) are available on the [open data site](https://donnees.montreal.ca/ville-de-montreal/images-annotees-cameras-circulation).
+ - Images (RGB and semantic) are available **SOON** on the open data site.
      - The data is published divided into 2 datasets : RGB and Semantic. It is not divided into train/val/test splits. The file ```split.csv``` provides the splits to reproduce the experiments.
      - The ```split.csv``` file also provides the small/large split based on image resolution.
      - The images used for the semi-supervised training (aimed for the ```extra``` directory) are not available yet. In the mean time, images can be acquired from the [open data site](https://ville.montreal.qc.ca/circulation/).
@@ -280,8 +280,8 @@ L'image suivante est tirée des 10 000 images annotées que nous avons utilisée
   <img src="res/007562.png" width="350" >
 </p>
 
-Vous pouvez trouver l'ensemble de données annotées sur le [site de données ouvertes] de la Ville de 
-Montréal (https://donnees.montreal.ca/ville-de-montreal/images-annotees-cameras-circulation). Suivez le lien et vous trouverez, en plus des données, un dictionnaire 
+Vous pourrez trouver **TRÈS BIENTÔT** l'ensemble de données annotées sur le site de données ouvertes de la Ville de 
+Montréal. Suivez le lien et vous trouverez, en plus des données, un dictionnaire 
 de données (avec les balises sémantiques et leur couleur), la méthodologie appliquée pour annoter les données, 
 les conditions d'utilisation et la licence.
 
@@ -414,7 +414,7 @@ Quelques points clés à garder à l'esprit:
  - Les images ```RGB``` et leur équivalent dans ```Semantic``` doivent avoir le même nom, mais peuvent utiliser différents 
  formats de fichiers images (png, jpg, tiff, etc.).
  - Images > 'Dataset_Name' > RGB > extra n'est requis que pour l'entraînement semi-supervisée.
- - Les images (RGB et sémantique) sont disponibles sur le [site des données ouvertes](https://donnees.montreal.ca/ville-de-montreal/images-annotees-cameras-circulation).
+ - Les images (RGB et sémantique) seront disponibles **BIENTÔT** sur le site des données ouvertes.
      - Les données sont publiées divisées en 2 jeux de données : RGB et Sémantique.  Il n'est pas divisé 
      en train/val/test. Le fichier ```split.csv``` fournit les splits pour reproduire les expériences.
      - Le fichier  ```split.csv``` fournit également la petite/grande division basée sur la résolution de l'image.
